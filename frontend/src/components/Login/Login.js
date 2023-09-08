@@ -18,7 +18,6 @@ function Login() {
   const usernameRef = useRef(null);
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-  const [showValidation, setShowValidation] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
   const [passVisible, setIsVisible] = useState(false);
   const {setUser, setUserId} = useContext(Context);  
@@ -102,8 +101,7 @@ function Login() {
         console.error("Error:", error);
       }
     } else {
-      toast.error('please check the validations')
-      setShowValidation(true);
+      toast('Password must contain atleast one uppercase letter, one lowercase letter, one special letter, one digit. Characters[8 or more]', {autoClose: 10000})
     }
     }
   };
@@ -154,11 +152,14 @@ function Login() {
 
   return (
     <>
-      <div className="container">
+      <div className="login-container">
         <ToastContainer />
-        <h1 className="heading">TravelTrackers</h1>
-        <div className="authForm">
-          <h1>{isLogin ? "Login" : "SignUp"}</h1>
+        <div className="main-container">
+          <div className="img-container">
+              <h1>TRAVEL IS THE ONLY THING YOU BUY THAT MAKES TOU RICHER</h1>
+          </div>
+          <div className="authForm">
+          <h1 onClick={()=> navigate('/')}>TravelTrackers</h1>
           <form action="" onSubmit={handleSubmit}>
             <div className="mainForm">
               {!isLogin && (
@@ -241,18 +242,7 @@ function Login() {
               )}
             </p>
           }
-          {showValidation && (
-            <div className="validation">
-              <ul>
-                <li>Username must be alphanumeric. Characters[6-10]</li>
-                <li>
-                  Password must contain atleast one uppercase letter, one
-                  lowercase letter, one special letter, one digit. Characters[8
-                  or more]
-                </li>
-              </ul>
-            </div>
-          )}
+        </div>
         </div>
       </div>
     </>

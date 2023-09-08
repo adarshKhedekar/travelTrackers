@@ -2,6 +2,7 @@ import React, { useEffect, useContext } from "react";
 import { useGoogleLogin } from "@react-oauth/google";
 import { Context } from "../../utils/context";
 import { useNavigate } from "react-router-dom";
+import {FcGoogle} from 'react-icons/fc'
 
 function GoogleLogin() {
   const { user, setUser, setUserId } = useContext(Context);
@@ -46,7 +47,7 @@ function GoogleLogin() {
   });
 
   return <div>
-    <div onClick={handleLogin}>Continue with Google</div>
+    <div className="google" onClick={handleLogin}>Continue with Google <FcGoogle size={20}/></div>
   </div>;
 }
 
