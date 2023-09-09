@@ -12,6 +12,7 @@
     margin: 0 auto;
     z-index: 99;
     @include md{
+        height: 80px;
         padding: 0 40px;
         width: 100%;
     }
@@ -58,8 +59,12 @@
                 padding: 5px 10px;
                 border: 2px solid #1597BB;
                 border-radius: 20px;
-                cursor: pointer;
-                
+                cursor: pointer; 
+                transition: all 0.3s ease-in;
+            }
+            .login:hover{
+                background-color: #1597BB;
+                color: white;
             }
             
         }
@@ -70,5 +75,19 @@
                 display: block;
             }
         }
+    }
+    &.sticky-header{
+        position: sticky;
+        top: 0;
+        transform: translateY(-80px);
+        animation: stickyHeader 0.3s ease forwards;
+    }
+}
+@keyframes stickyHeader {
+    0%{
+        transform: translateY(-80px);
+    }
+    100%{
+        transform: translateY(0);
     }
 }

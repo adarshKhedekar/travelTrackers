@@ -1,14 +1,16 @@
 import "./Home.scss";
-import Header from "../Header/Header";
 import SearchBus from "./SearchBus/SearchBus";
-
 
 function Home() {
   return (
     <>
-      <div className="home-container">
-        <Header />
+      <div>
         <SearchBus/>
+        <div className="main-content">
+        <div className="layout">
+          {/* <Category /> */}
+        </div>
+      </div>
       </div>
     </>
   );

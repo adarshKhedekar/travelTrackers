@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Header.scss";
 import { FaUserCircle } from "react-icons/fa";
 import {BiSolidUpArrow, BiSolidDownArrow} from "react-icons/bi"
@@ -9,12 +9,26 @@ function Header() {
   const { user } = useContext(Context);
   const navigate = useNavigate();
   const [dropDown, setDropDown] = useState();
+  const [scrolled, setScrolled] = useState();
 
   const handleToggle = () => {
     setDropDown(prevState => !prevState)
   }
+
+  const handleScroll = () => {
+    let offset = window.scrollY;
+    if (offset > 100) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className="main-header">
+    <header className={`main-header ${scrolled ? 'sticky-header': ''}`}>
       <div className="left-container">
         <h1 onClick={() => navigate('/')}>TravelTrackers</h1>
       </div>
