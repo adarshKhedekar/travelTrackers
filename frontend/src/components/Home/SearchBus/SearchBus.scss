@@ -1,0 +1,114 @@
+@import "../../../css-config/mixins.scss";
+
+.main-banner{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-image: url(../../../assets/bghome2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-bottom: 20px;
+    @include md{
+        background-image: url(../../../assets/bghome.jpg);
+        gap:100px;
+        height: calc(100vh - 60px);
+        padding-bottom: 0;
+        background-position: center 70%;
+    }
+    .text-container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10%;
+        @include md{
+            padding-top:5%;
+        }
+        h1{
+            color: white;
+            margin: auto;
+            font-size: 35px;
+            text-shadow: 0px 0px 10px black;
+            @include md{
+                font-size: 50px;
+            }
+        }
+    }
+    .search-bus{
+        position: relative;
+        display: flex;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 80%;
+        background-color: white;
+        height: 250px;
+        margin: 0 auto;
+        box-shadow: 0px 0px 5px rgba($color: #000000, $alpha: 0.9);
+        @include md{
+            border-radius: 30px;
+            height: 100px;    
+            padding: 30px;
+            justify-content: center;
+            flex-direction: row;
+        }
+        .input{
+            display: flex;
+            position: relative;
+            width: 100%;
+            border: 2px dashed #1597BB;
+            padding: 10px 25px;
+            @include md{
+                border:  none;
+            }
+            .logo{
+                position: relative;
+                span{
+                    svg{
+                        font-size: 30px;
+                    }
+                }
+                span:first-child{
+                    position: absolute;
+                    left: -16px;
+                    @include md{
+                        left: -22px;
+                    }
+                }
+            }
+            input{
+                background: transparent;
+                border: none;
+                outline: none;
+                width: 100%;
+                margin-left: 14px;
+                font-size: 20px;
+                @include md{
+                    font-size: 17px;
+                    border-bottom: 2px solid #1597BB;
+                }
+            }
+        }
+        hr{
+            display: none;
+            @include md{
+                display: block;
+                height: 100%;
+                border-color: #1597BB;
+                margin: 0 20px;
+            }
+        }
+        .search-name{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1597BB;
+            padding: 10px;
+            color: white;
+            width: 80%;
+            font-size: 20px;
+            gap: 10px;
+            cursor: pointer;
+        }
+    }
+}

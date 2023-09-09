@@ -1,13 +1,17 @@
-import React, { useContext } from 'react'
-import { Context } from '../../utils/context'
+import "./Home.scss";
+import Header from "../Header/Header";
+import SearchBus from "./SearchBus/SearchBus";
+
 
 function Home() {
-  const {user} = useContext(Context)
   return (
     <>
-      <h1>Hi!, {user}</h1>
+      <div className="home-container">
+        <Header />
+        <SearchBus/>
+      </div>
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;

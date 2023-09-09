@@ -1,0 +1,74 @@
+@import '../../css-config/mixins.scss';
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 15px;
+    color: #1597BB;
+    background-color: white;
+    height: 60px;
+    margin: 0 auto;
+    z-index: 99;
+    @include md{
+        padding: 0 40px;
+        width: 100%;
+    }
+    .left-container{
+        cursor: pointer;
+    }
+    .right-container{
+        text-transform: uppercase;
+        @include md{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .users-profile{
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 5px;
+                background-color: white;
+                color: #1597BB;
+                padding: 5px 10px;
+                border: 2px solid #1597BB;
+                border-radius: 20px;
+                font-size: 12px;
+                cursor: pointer;
+                @include md{
+                    font-size: 15px;
+                }
+                span{
+                    svg{
+                        font-size: 15px;
+                        margin-top: 5px;
+                        @include md{
+                            margin-top: 3px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+            .login{
+                background-color: white;
+                color: #1597BB;
+                padding: 5px 10px;
+                border: 2px solid #1597BB;
+                border-radius: 20px;
+                cursor: pointer;
+                
+            }
+            
+        }
+        .about{
+            display: none;
+            cursor: pointer;
+            @include md{
+                display: block;
+            }
+        }
+    }
+}

@@ -7,6 +7,7 @@ import NoMatch from "./NoMatch";
 import { useContext, useEffect } from "react";
 import { Context } from "./utils/context";
 
+//add google maps for tracking
 function App() {
   const {setUser, setUserId} = useContext(Context)
   useEffect(() => {
@@ -30,6 +31,5 @@ function App() {
     </div>
   );
 }
-//#240090, #190061
 
 export default App;
