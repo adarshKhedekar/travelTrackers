@@ -1,11 +1,16 @@
-import './Booking.scss'
+import "./Booking.scss";
+import Categorization from "./Categorization";
+import Checkout from "./Checkout";
+import SeatSelection from "./SeatSelection/SeatSelection";
 
 function Booking() {
   return (
-    <div>
-      booking karo
+    <div className="booking-container">
+      <Categorization />
+      <SeatSelection/>
+      <Checkout/>
     </div>
-  )
+  );
 }
 
-export default Booking
+export default Booking;

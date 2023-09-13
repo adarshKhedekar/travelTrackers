@@ -32,7 +32,7 @@ function Footer() {
         <div className="col">
           <div className="title">Categories</div>
           <span className="text">Single Deck Bus</span>
-          <span className="text" >Double Deck Bus</span>
+          <span className="text" >Sleeper Bus</span>
           <span className="text" >Minibus</span>
           <span className="text" >Shuttle Bus</span>
         </div>

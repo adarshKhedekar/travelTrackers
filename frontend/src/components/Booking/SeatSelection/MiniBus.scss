@@ -1,0 +1,76 @@
+@import '../../../css-config/mixins.scss';
+
+.mini-bus-seat-container{
+    display: flex;
+    flex-direction: column;
+    .steering{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(221, 219, 219);
+        svg{
+            color: #212121;
+            font-size: 30px;
+        }
+    }
+    .seats{
+        height: calc(100vh - 40px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        .left-seats{
+            display: flex;
+            width: 149px;
+            gap: 20px;
+            height: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            .left-seat{        
+                cursor: pointer;
+                border: 1px solid #1597BB;
+                width: 25px;
+                height: 25px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include md{
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+        .right-seats{
+            display: flex;
+            width: 172px;
+            gap: 20px;
+            height: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            @include md{
+                width: 200px;
+            }
+            .right-seat{
+                cursor: pointer;
+                border: 1px solid #1597BB;
+                width: 25px;
+                height: 25px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include md{
+                    width: 35px;
+                    height: 35px;
+                }
+            }
+        }
+    }
+}

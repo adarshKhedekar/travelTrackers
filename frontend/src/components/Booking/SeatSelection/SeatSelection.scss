@@ -1,0 +1,11 @@
+@import "../../../css-config/mixins.scss";
+
+.seat-selection{
+    overflow: auto;
+    border: 1px solid grey;
+    background-color: rgb(253, 252, 252);
+    flex: 2;
+}
+.seat-selection::-webkit-scrollbar{
+    display: none;
+}

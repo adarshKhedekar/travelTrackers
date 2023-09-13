@@ -1,1 +1,11 @@
 @import '../../css-config/mixins.scss';
+
+.booking-container{
+    display: flex;
+    height: calc(100vh - 60px);
+    flex-direction: column;
+    @include md{
+        flex-direction: row;
+        height: calc(100vh - 80px);
+    }
+}
