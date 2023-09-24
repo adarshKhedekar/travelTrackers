@@ -61,6 +61,27 @@
                 padding: 0;;
                 border:  none;
             }
+            select {
+                width: 100%;
+                outline: none;
+                border: none;
+                font-size: 25px;
+                margin-left: 10px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                @include md{
+                    border-bottom: 2px solid #1597BB;
+                }
+                option{
+                    @include md{
+                        font-size: 25px;
+                    }
+                }
+            }
+            select::-ms-expand {
+                display: none;
+            }
             .logo{
                 position: relative;
                 span{
